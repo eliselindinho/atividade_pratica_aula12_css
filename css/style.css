@@ -1,0 +1,29 @@
+span {
+  background-color: bisque;
+  display: block;
+  column-span: all;
+}
+
+.pagina1 {
+  column-span: all;
+  line-height: normal;
+}
+
+.pagina2 {
+  column-count: 3;
+  column-gap: 30px;
+  column-rule: 4px dotted aqua;
+  column-fill: balance;
+}
+
+@media print {
+  .pagina1 {
+    page-break-after: always;
+    margin: 0;
+  }
+
+  .pagina2 {
+    page-break-before: always;
+    margin: 0px;
+  }
+}
